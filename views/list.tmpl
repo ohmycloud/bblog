@@ -1,0 +1,12 @@
+% my (@titles) = @_;
+<%= Template::Mojo.new(slurp "include/header.tmpl").render(); %>
+<ul style="list-style-type: none;">
+% for @titles.keys {
+	<li>
+	<a href="http://codewat.ch/blog/<%= @titles.elems - ($_) %>" style="text-align: center;"><%= @titles[$_]; %></a>
+	</li>
+% }
+</ul>
+</div>
+</body>
+</html>
