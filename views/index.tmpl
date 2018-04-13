@@ -7,10 +7,9 @@
 <p>This website is running in my own (bodged together) program using Bailador and Perl6.</p>
 </div>
 <div class="posts">
-<h1>Blog Posts</h1>
+<h1>Latest Blog Posts</h1>
 % my (@titles) = @_;
 <ul>
-<li><a href="http://codewat.ch/list">Click here for a complete list</a></li>
 % my $i;
 % if @titles.elems < 4 {
 %		$i = @titles.elems;
@@ -20,7 +19,7 @@
 %
 % loop (; $i > 0; $i--) {
         <li>
-        <a href="http://codewat.ch/blog/<%= $i %>"><div class="number"><%= $i; %>: </div><%= @titles[@titles.elems - $i]; %></a>
+        <a href="https://codewat.ch/blog/<%= $i %>"><div class="number"><%= $i; %>: </div><%= @titles[@titles.elems - $i]; %></a>
         </li>
 % }
 </ul>

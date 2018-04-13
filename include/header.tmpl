@@ -1,16 +1,19 @@
 % my ($h) = @_;
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
-<title>b's blog</title>
+<title>codewatch - benji's blog</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="description" content="a website where I post about stuff" />
-<link href="https://fonts.googleapis.com/css?family=Vollkorn|Vollkorn+SC" rel="stylesheet">
-<link rel="shortcun icon" type="image/png" href="https://i.imgur.com/g9qj2mh.png">
+<meta name="description" content="Benji's website where he posts about stuff" />
+<meta name="keywords" content="benji, blog, bblog, benjamin, frady, programming, music" />
+<meta name="author" content="Benji Frady" />
+<!--<link href="https://fonts.googleapis.com/css?family=Vollkorn|Vollkorn+SC" rel="stylesheet" />-->
+<link rel="alternative" href="https://codewat.ch/" hreflang="en" />
+<link rel="shortcun icon" type="image/png" href="https://i.imgur.com/g9qj2mh.png" />
 <style type="text/css">
 .number {
-	font-family: 'Vollkorn SC', serif;
+	/*font-family: 'Vollkorn SC', serif;*/
 	font-size: 11px;
 	color: #444;
 }
@@ -31,7 +34,8 @@
 	width: 45%;
 }
 .everything {
-	font-family: 'Vollkorn', serif;
+	/*font-family: 'Vollkorn', serif;*/
+	font-family: Helvetica, sans-serif;
 	font-size: 16px;
     word-wrap: break-word;
 	max-width: 940px;
@@ -48,14 +52,15 @@ body {
 	border: 0;
 }
 .header {
-	margin-top: 5px;
+	width: 100%;
+	margin-bottom: 20px;
 }
 .header a:hover {
 	opacity: 0.7;
 	filter: alpha(opacity=70);
 }
 h2 {
-	font-family: 'Vollkorn SC', serif;
+	/*font-family: 'Vollkorn SC', serif;*/
 	text-transform: uppercase;
 	margin-top: 25px;
 	font-size: 16px;
@@ -96,7 +101,7 @@ li {
 	padding-bottom: 7px;
 }
 p {
-	word-spacing: 3px;
+	word-spacing: 2px;
 	margin-left: 25px;
 	line-height: 2;
 }
@@ -107,10 +112,43 @@ img {
 	float: right;
 	padding: 20px;
 }
+.title {
+	width: auto;
+	font-weight: bold;
+	font-size: 28px;
+}
+.nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.nav {
+	margin-right: 20px;
+	margin-top: 10px;
+	float: right;
+	font-weight: bold;
+	/*float: right;*/
+	/*width: auto;*/
+}
+.nav li {
+	padding-left: 8px;
+	padding-right: 8px;
+	float: left;
+}
+.nav li a {
+	display: block;
+	text-align: center;
+}
 </style>
 </head>
 <body>
-<div class="header">
-<a href="http://codewat.ch/"><img src="https://a.safe.moe/FAL0aoH.png" style="padding: 0px; width: 84px; float: none; position: absolute; left: 50%; margin-left: -42px;" /></a>
-</div>
 <div class="everything">
+<div class="header">
+<span class="title"><a href="https://codewat.ch/" hreflang="en" style="color: #111;">codewatch</a></span>
+<span class="nav">
+<ul>
+<li><a href="https://codewat.ch/list">blog post list</a></li>
+<li><a href="https://github.com/ijneb">my github</a></li>
+</ul>
+</span>
+</div>
