@@ -1,15 +1,18 @@
 % my ($h) = @_;
 <%= Template::Mojo.new(slurp "include/header.tmpl").render($h); %>
-<div class="home">
-<div class="info">
-<h1>Welcome to Benjamin's blog!</h1>
-<p>If you need to get in contact with me, email me at <a href="mailto:senochan@autistici.org">senochan@autistici.org</a> or add me on discord at benji#4364.</p>
-<p>This website is running in my own (bodged together) program using Bailador and Perl6.</p>
-</div>
-<div class="posts">
-<h1>Latest Blog Posts</h1>
+				<div id="home">
+					<div id="info">
+						<h1>Welcome to Benjamin's abode!</h1>
+						<p>If you need to get in contact with me, you can either email me at <a href="mailto:senochan@autistici.org">senochan@autistici.org</a> or add me on discord at benji#4364.</p>
+						<p>This website is running on my own (bodged together) program using Bailador and Rakudo Perl6.</p>
+					</div>
+					<div id="posts">
+					<h1>Latest Blog Posts</h1>
+
 % my (@titles) = @_;
-<ul>
+
+					<ul>
+
 % my $i;
 % if @titles.elems < 4 {
 %		$i = @titles.elems;
@@ -18,13 +21,14 @@
 % }
 %
 % loop (; $i > 0; $i--) {
-        <li>
-        <a href="https://codewat.ch/blog/<%= $i %>"><div class="number"><%= $i; %>: </div><%= @titles[@titles.elems - $i]; %></a>
-        </li>
+
+	  					<li>
+							<a href="https://codewat.ch/blog/<%= $i %>"><span class="number"><%= $i; %>: </span><%= @titles[@titles.elems - $i]; %></a>
+		  				</li>
 % }
-</ul>
-</div>
-</div>
-</div>
-</body>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>

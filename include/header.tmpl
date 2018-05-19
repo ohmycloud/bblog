@@ -1,66 +1,21 @@
 % my ($h) = @_;
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-<head>
-<title>codewatch - benji's blog</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="description" content="Benji's website where he posts about stuff" />
-<meta name="keywords" content="benji, blog, bblog, benjamin, frady, programming, music" />
-<meta name="author" content="Benji Frady" />
-<!--<link href="https://fonts.googleapis.com/css?family=Vollkorn|Vollkorn+SC" rel="stylesheet" />-->
-<link rel="alternative" href="https://codewat.ch/" hreflang="en" />
-<link rel="shortcun icon" type="image/png" href="https://i.imgur.com/g9qj2mh.png" />
-<style type="text/css">
-.number {
-	/*font-family: 'Vollkorn SC', serif;*/
-	font-size: 11px;
-	color: #444;
-}
-.home {
-	width: 980px;
-}
-.info {
-	font-size: 14px;
-	float: left;
-	width: 50%;
-}
-/*.info p::before {
-	content: " - ";
-}*/
-.posts {
-	float: right;
-	font-size: 12px;
-	width: 45%;
-}
-.everything {
-	/*font-family: 'Vollkorn', serif;*/
-	font-family: Helvetica, sans-serif;
-	font-size: 16px;
-    word-wrap: break-word;
-	max-width: 940px;
-	min-width: 440px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-left: auto;
-	margin-right: auto;
-	padding-top: 35px;
-}
+<html>
+	<head>
+		<title>codewatch - benji's blog</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="description" content="Benji's website where he posts about stuff" />
+		<meta name="keywords" content="benji, blog, bblog, benjamin, frady, programming, music" />
+		<meta name="author" content="Benji Frady" />
+		<link rel="alternative" href="https://codewat.ch/" hreflang="en" />
+		<link rel="shortcun icon" type="image/png" href="https://i.imgur.com/g9qj2mh.png" />
+		<style type="text/css">
 body {
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
-.header {
-	width: 100%;
-	margin-bottom: 20px;
-}
-.header a:hover {
-	opacity: 0.7;
-	filter: alpha(opacity=70);
+	margin: 0px;
+	margin-bottom: 60px;
+	padding: 0px;
+	border: 0px;
 }
 h2 {
-	/*font-family: 'Vollkorn SC', serif;*/
 	text-transform: uppercase;
 	margin-top: 25px;
 	font-size: 16px;
@@ -72,33 +27,12 @@ h1 {
 	font-weight: 400;
 	font-size: 16px;
 }
-hr {
-	width: 100%;
-	border: 0;
-	border-bottom: 1px dashed #000;
-	background: #fff;
-}
 a {
 	color: darkblue;
 	text-decoration: none;
 }
 a:hover {
 	color: gray;
-}
-.center {
-	margin-left: auto;
-	margin-right: auto;
-}
-ul {
-	padding: 0px;
-	list-style-type: none;
-}
-li {
-	text-align: left;
-	padding-top: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
-	padding-bottom: 7px;
 }
 p {
 	word-spacing: 2px;
@@ -112,43 +46,104 @@ img {
 	float: right;
 	padding: 20px;
 }
-.title {
+hr {
+	width: 100%;
+	border: 0px;
+	border-bottom: 1px solid #000;
+	background: #000;
+}
+ul {
+	list-style-type: none;
+}
+#header {
+	padding-top: 6px;
+}
+#header a {
+	color: black;
+	width: 100%;
+}
+#header a:hover {
+	color: gray;
+}
+.number {
+	font-size: 11px;
+	color: #444;
+}
+#home {
+	width: 980px;
+}
+#info {
+	font-size: 14px;
+	float: left;
+	width: 55%;
+}
+#posts {
+	float: right;
+	font-size: 14px;
+	width: 45%;
+}
+#posts ul {
+	padding-left: 0px;
+	margin-left: 25px;
+}
+#posts li {
+	margin-bottom: 3px;
+}
+.everything {
+	font-family: Helvetica, sans-serif;
+	font-size: 16px;
+	word-wrap: break-word;
+	max-width: 940px;
+	min-width: 440px;
+	padding-left: 10px;
+	padding-right: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+#title {
 	width: auto;
 	font-weight: bold;
 	font-size: 28px;
 }
-.nav ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
+#nav ul {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	margin-top: 8px;
+	padding: 0px;
 }
-.nav {
-	margin-right: 20px;
-	margin-top: 10px;
-	float: right;
+#nav {
+	padding-left: 4px;
+	text-align: left;
+	font-size: 18px;
 	font-weight: bold;
-	/*float: right;*/
-	/*width: auto;*/
 }
-.nav li {
+#nav li {
 	padding-left: 8px;
 	padding-right: 8px;
 	float: left;
 }
-.nav li a {
+#nav li a {
 	display: block;
 	text-align: center;
 }
-</style>
-</head>
-<body>
-<div class="everything">
-<div class="header">
-<span class="title"><a href="https://codewat.ch/" hreflang="en" style="color: #111;">codewatch</a></span>
-<span class="nav">
-<ul>
-<li><a href="https://codewat.ch/list">blog post list</a></li>
-<li><a href="https://github.com/ijneb">my github</a></li>
-</ul>
-</span>
-</div>
+#list-page-list li {
+	margin-bottom: 5px;
+}
+		</style>
+	</head>
+	<body>
+		<div class="everything">
+			<div id="header">
+				<span id="title"><a href="https://codewat.ch/" hreflang="en">codewatch</a></span>
+				<span id="nav">
+					<ul>
+						<li><a href="https://codewat.ch/list">all posts</a></li>
+						<li><a href="https://github.com/ijneb">my github</a></li>
+					</ul>
+				</span>
+			</div>

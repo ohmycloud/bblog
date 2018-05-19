@@ -1,12 +1,18 @@
 % my ($h) = @_;
 <%= Template::Mojo.new(slurp "include/header.tmpl").render($h); %>
+
+		<br />
+
 <%=
+
 do if "posts/$h<post>.html".IO.e {
 	slurp "posts/$h<post>.html";
 } else {
 	"<div style=\"text-align: center;\">Post not found</div>";
 }
+
 %>
-</div>
-</body>
+
+		</div>
+	</body>
 </html>
