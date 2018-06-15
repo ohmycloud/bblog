@@ -1,3 +1,3 @@
-# Blog written with Bailador in Perl6
+# Blog written with Cro in Perl6
 
-This will probably soon be rewritten using Cro (a more recent reactive web thingy).
+This is now in Cro instead of Bailador!

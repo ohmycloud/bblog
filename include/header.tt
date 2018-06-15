@@ -1,4 +1,3 @@
-% my ($h) = @_;
 <html>
 	<head>
 		<title>cw blog</title>
@@ -16,9 +15,12 @@ body {
 	border: 0px;
 }
 h2 {
-/*	text-transform: uppercase;*/
+	text-transform: uppercase;
 	margin-top: 25px;
 	font-size: 16px;
+}
+h2::first-letter {
+	font-size: 120%;
 }
 h1 {
 	font-weight: 400;
@@ -32,13 +34,9 @@ a:hover {
 	color: gray;
 }
 p {
-	text-indent: 30px;
-	word-spacing: 1px;
+	word-spacing: 2px;
 	margin-left: 25px;
 	line-height: 2;
-}
-#info p {
-	text-indent: 0;
 }
 sup {
 	margin-right: 2px;
@@ -46,21 +44,6 @@ sup {
 img {
 	float: right;
 	padding: 20px;
-}
-#title img {
-	float: none;
-	padding: 0px;
-	margin-right: 18px;
-	width: 60px;
-	height: 60px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-}
-#title {
-	width: auto;
-/*	font-weight: bold;*/
-	font-size: 34px;
 }
 hr {
 	width: 100%;
@@ -70,17 +53,6 @@ hr {
 }
 ul {
 	list-style-type: none;
-}
-pre {
-	border-left: solid 1px;
-	padding-left: 25px;
-	font-size: 14px;
-}
-#posts {
-	float: right;
-	font-size: 14px;
-	width: 45%;
-	float: right;
 }
 #header {
 	padding-bottom: 15px;
@@ -93,16 +65,22 @@ pre {
 #header a:hover {
 	color: gray;
 }
+.number {
+	font-size: 11px;
+	color: #444;
+}
 #home {
 	width: 980px;
 }
 #info {
 	font-size: 14px;
 	float: left;
-	width: 50%;
+	width: 55%;
 }
-#older-link {
-	font-size: 12px;
+#posts {
+	float: right;
+	font-size: 14px;
+	width: 45%;
 }
 #posts ul {
 	padding-left: 0px;
@@ -122,13 +100,24 @@ pre {
 	margin-left: auto;
 	margin-right: auto;
 }
-.number {
-	font-size: 11px;
-	color: #444;
-}
 .center {
 	margin-left: auto;
 	margin-right: auto;
+}
+#title img {
+	float: none;
+	padding: 0px;
+	margin-right: 18px;
+	width: 60px;
+	height: 60px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+#title {
+	width: auto;
+/*	font-weight: bold;*/
+	font-size: 34px;
 }
 #nav ul {
 	display: inline-block;

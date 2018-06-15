@@ -1,0 +1,9 @@
+[% INCLUDE "header" %]
+
+		<br />
+
+[% content %]
+
+		</div>
+	</body>
+</html>
