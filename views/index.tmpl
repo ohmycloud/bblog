@@ -14,18 +14,26 @@
 					<ul>
 
 % my $i;
+% my $bottom = 0;
 % if @titles.elems < 4 {
-%		$i = @titles.elems;
+% 	$i = @titles.elems;
 % } else {
-% 		$i = 3;
+% 	$i = @titles.elems;
+%	$bottom = @titles.elems - 3;
 % }
 %
-% loop (; $i > 0; $i--) {
+% loop (; $i > $bottom; $i--) {
 
 	  					<li>
 							<a href="https://codewat.ch/blog/<%= $i %>"><span class="number"><%= $i; %>: </span><%= @titles[@titles.elems - $i]; %></a>
 		  				</li>
 % }
+% if $bottom != 0 {
+						<li>
+							<a href="https://codewat.ch/list"><span id="older-link">View Older Posts</span></a>
+						</li>
+% }
+%
 					</ul>
 				</div>
 			</div>
