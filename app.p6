@@ -6,7 +6,7 @@ use Text::VimColour;
 use Template6;
 
 my $latest;
-my %titles;
+my @titles;
 
 my $t6 = Template6.new;
 $t6.add-path: 'views';
@@ -17,9 +17,10 @@ sub scan {
 	for dir('posts') -> $file {
 		$latest++ if !$file.basename.starts-with('.') && $file.basename.ends-with('.html');
 	}
-	%titles = ();
+	@titles = ();
 	loop (my $i = $latest; $i > 0; $i--) {
-		%titles.push(($latest-$i)+1 => "posts/$i.html".IO.lines[0]);
+		my %h = index => $i, title => "posts/$i.html".IO.lines[0];
+		@titles.push(%h);
 	}
 }
 
@@ -27,17 +28,17 @@ Supply.interval(1200).tap: { scan(); }
 
 my $application = route {
 	get -> {
-		my %clipped_titles;
-		if %titles.elems < 4 {
-			%clipped_titles = %titles;
+		my @clipped_titles;
+		if @titles.elems < 4 {
+			@clipped_titles = @titles;
 		} else {
-			%clipped_titles = %titles[^3];
+			@clipped_titles = @titles[^3];
 		}
-		content 'text/html', $t6.process('index', :titles(%clipped_titles));
+		content 'text/html', $t6.process('index', :titles(@clipped_titles));
 	}
 
 	get -> 'list' {
-		content 'text/html', $t6.process('list', :titles(%titles));
+		content 'text/html', $t6.process('list', :titles(@titles));
 	}
 
 	get -> 'blog', $post {
@@ -52,7 +53,7 @@ my $application = route {
 }
 
 my Cro::Service $service = Cro::HTTP::Server.new(
-	:host('192.168.200.152'), :port(3000), :$application
+	:host('127.0.0.1'), :port(3000), :$application
 );
 
 $service.start;

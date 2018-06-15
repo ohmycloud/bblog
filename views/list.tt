@@ -2,9 +2,9 @@
 
 			<div id="list-page-list">
 				<ul style="list-style-type: none;">
-[% for item in titles %]
+[% for titles as post %]
 					<li>
-						<a href="https://codewat.ch/blog/[% item.key %]" style="text-align: center;">[% item.value %]</a>
+						<a href="https://codewat.ch/blog/[% post.index %]" style="text-align: center;">[% post.title %]</a>
 					</li>
 [% end %]
 				</ul>

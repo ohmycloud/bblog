@@ -10,9 +10,9 @@
 
 					<ul>
 
-[% for item in titles %]
+[% for titles as post %]
 	  					<li>
-							<a href="https://codewat.ch/blog/[% item.key %]"><span class="number">[% item.key %]: </span>[% item.value %]</a>
+							<a href="https://codewat.ch/blog/[% post.index %]"><span class="number">[% post.index %]: </span>[% post.title %]</a>
 		  				</li>
 [% end %]
 					</ul>
