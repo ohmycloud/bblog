@@ -3,7 +3,7 @@
 					<div id="info">
 						<h1>Welcome to Benjamin's abode!</h1>
 						<p>If you need to get in contact with me, you can either email me at <a href="mailto:senochan@autistici.org">senochan@autistici.org</a> or add me on discord at benji#4364.</p>
-						<p>This website is running on my own (bodged together) program using Bailador and Rakudo Perl6.</p>
+						<p>This website is running on my own (bodged together) program using Cro and Rakudo Perl 6.</p>
 					</div>
 					<div id="posts">
 					<h1>Latest Blog Posts</h1>
@@ -15,6 +15,7 @@
 							<a href="https://codewat.ch/blog/[% post.index %]"><span class="number">[% post.index %]: </span>[% post.title %]</a>
 		  				</li>
 [% end %]
+						<li><a style="font-size: 12px;" href="list">Older posts</a></li>
 					</ul>
 				</div>
 			</div>

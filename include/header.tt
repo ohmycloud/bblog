@@ -7,12 +7,42 @@
 		<meta name="author" content="Benji Frady" />
 		<link rel="alternative" href="https://codewat.ch/" hreflang="en" />
 		<link rel="shortcun icon" type="image/png" href="https://i.imgur.com/9qjsYz5.png" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<style type="text/css">
 body {
+	font-family: 'Open Sans', 'Verdana', sans-serif;
+	background: #fff;
+	color: #111;
 	margin: 0px;
 	margin-bottom: 60px;
 	padding: 0px;
 	border: 0px;
+}
+.hvr {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+}
+.hvr:hover .desc {
+	visibility: visible;
+	opacity: 1;
+}
+.hvr .desc {
+	font-size: 10px;
+	text-align: center;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	visibility: hidden;
+}
+#gradient {
+	background: #fff;
+	background: linear-gradient(180deg, #d4e9de, #fff, #fff, #fff);
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 50px;
+	z-index: -100;
 }
 h2 {
 	text-transform: uppercase;
@@ -27,11 +57,11 @@ h1 {
 	font-size: 16px;
 }
 a {
-	color: darkblue;
+	color: #527F83;
 	text-decoration: none;
 }
 a:hover {
-	color: gray;
+	color: #526D70;
 }
 p {
 	word-spacing: 2px;
@@ -44,30 +74,39 @@ sup {
 img {
 	float: right;
 	padding: 20px;
+	-webkit-filter: drop-shadow(5px 5px 5px #99a);
+	filter: drop-shadow(5px 5px 5px #99a);
 }
 hr {
 	width: 100%;
 	border: 0px;
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid #6b6969;
 	background: #000;
 }
 ul {
 	list-style-type: none;
 }
 #header {
-	padding-bottom: 15px;
+	background: #24292e;
+}
+#top {
 	padding-top: 6px;
+	max-width: 940px;
+	min-width: 440px;
+	display: block;
+	margin: 0 auto;
 }
 #header a {
-	color: black;
+	vertical-align: middle;
+	color: #fff;
 	width: 100%;
 }
 #header a:hover {
-	color: gray;
+	color: #ddd;
 }
 .number {
 	font-size: 11px;
-	color: #444;
+	color: #bbb;
 }
 #home {
 	width: 980px;
@@ -88,10 +127,13 @@ ul {
 }
 #posts li {
 	margin-bottom: 3px;
+	padding-bottom: 5px;
 }
 .everything {
-	font-family: Helvetica, sans-serif;
-	font-size: 16px;
+	top: -35px;
+	position: relative;
+	z-index: 100;
+	font-size: 14px;
 	word-wrap: break-word;
 	max-width: 940px;
 	min-width: 440px;
@@ -147,9 +189,9 @@ ul {
 		</style>
 	</head>
 	<body>
-		<div class="everything">
-			<div id="header">
-				<span id="title"><a href="https://codewat.ch/" hreflang="en"><img style="vertical-align: middle;" src="https://i.imgur.com/zuC5cvk.png" />codewatch</a></span>
+		<div id="header">
+			<div id="top">
+				<span id="title"><a href="https://codewat.ch/" hreflang="en">codewatch</a></span>
 				<span id="nav">
 					<ul>
 						<li><a href="https://codewat.ch/list">all posts</a></li>
@@ -157,3 +199,6 @@ ul {
 					</ul>
 				</span>
 			</div>
+		</div>
+		<div id="gradient"></div>
+		<div class="everything">
