@@ -12,7 +12,7 @@
 body {
 	font-family: 'Open Sans', 'Verdana', sans-serif;
 	background: #fff;
-	color: #111;
+	color: #000;
 	margin: 0px;
 	margin-bottom: 60px;
 	padding: 0px;
@@ -24,8 +24,8 @@ body {
 	overflow: hidden;
 }
 .hvr:hover .desc {
-	visibility: visible;
 	opacity: 1;
+	transition: opacity 275ms;
 }
 .hvr .desc {
 	font-size: 10px;
@@ -34,15 +34,7 @@ body {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	visibility: hidden;
-}
-#gradient {
-	background: #fff;
-	background: linear-gradient(180deg, #d4e9de, #fff, #fff, #fff);
-	background-repeat: no-repeat;
-	width: 100%;
-	height: 50px;
-	z-index: -100;
+	opacity: 0;
 }
 h2 {
 	text-transform: uppercase;
@@ -61,7 +53,8 @@ a {
 	text-decoration: none;
 }
 a:hover {
-	color: #526D70;
+	transition: color 0.3s ease;
+	color: #425D60;
 }
 p {
 	word-spacing: 2px;
@@ -74,8 +67,6 @@ sup {
 img {
 	float: right;
 	padding: 20px;
-	-webkit-filter: drop-shadow(5px 5px 5px #99a);
-	filter: drop-shadow(5px 5px 5px #99a);
 }
 hr {
 	width: 100%;
@@ -87,26 +78,23 @@ ul {
 	list-style-type: none;
 }
 #header {
-	background: #24292e;
-}
-#top {
-	padding-top: 6px;
-	max-width: 940px;
-	min-width: 440px;
-	display: block;
-	margin: 0 auto;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 30px;
+	background: #000;
 }
 #header a {
-	vertical-align: middle;
 	color: #fff;
 	width: 100%;
 }
 #header a:hover {
-	color: #ddd;
+	transition: color 0.3s ease;
+	color: #ccc;
 }
 .number {
 	font-size: 11px;
-	color: #bbb;
+	color: #999;
 }
 #home {
 	width: 980px;
@@ -118,7 +106,7 @@ ul {
 }
 #posts {
 	float: right;
-	font-size: 14px;
+	font-size: 15px;
 	width: 45%;
 }
 #posts ul {
@@ -130,8 +118,8 @@ ul {
 	padding-bottom: 5px;
 }
 .everything {
-	top: -35px;
 	position: relative;
+	top: 32px;
 	z-index: 100;
 	font-size: 14px;
 	word-wrap: break-word;
@@ -146,35 +134,45 @@ ul {
 	margin-left: auto;
 	margin-right: auto;
 }
-#title img {
-	float: none;
-	padding: 0px;
-	margin-right: 18px;
-	width: 60px;
-	height: 60px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-}
 #title {
-	width: auto;
-/*	font-weight: bold;*/
-	font-size: 34px;
+	margin-left: 0;
+	padding-left: 0;
+	position: relative;
+	top: 30px;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	max-width: 940px;
+	min-width: 440px;
+	font-size: 36px;
+}
+#title a {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: #000;
+}
+#title a:hover {
+	transition: color 0.5s ease;
+	color: #999;
 }
 #nav ul {
-	display: inline-block;
 	text-align: center;
-	vertical-align: top;
-	margin-top: 9px;
-	padding: 0px;
+	padding-top: 0;
+	margin-top: 5px;
+	margin-left: 0;
+	padding-left: 0;
 }
 #nav {
-	padding-left: 4px;
-	text-align: left;
-	font-size: 18px;
+	color: #ccc;
+	display: inline-block;
+	margin: 0 auto;
+	position: absolute;
+	top: 0;
+	height: 30px;
+	text-align: center;
+	font-size: 14px;
 }
 #nav li {
-	margin-top: 6px;
 	padding-left: 8px;
 	padding-right: 8px;
 	float: left;
@@ -190,15 +188,15 @@ ul {
 	</head>
 	<body>
 		<div id="header">
-			<div id="top">
-				<span id="title"><a href="https://codewat.ch/" hreflang="en">codewatch</a></span>
-				<span id="nav">
-					<ul>
-						<li><a href="https://codewat.ch/list">all posts</a></li>
-						<li><a href="https://github.com/ijneb">my github</a></li>
-					</ul>
-				</span>
-			</div>
+			<span id="nav">
+				<ul>
+					<li><a href="https://github.com/ijneb">my github</a></li>
+					<li>-</li>
+					<li><a href="https://www.linkedin.com/in/benjamin-frady">my linkedin</a></li>
+					<li>-</li>
+					<li><a href="https://codewat.ch/list">all blog posts</a></li>
+				</ul>
+			</span>
 		</div>
-		<div id="gradient"></div>
+		<span id="title"><a href="https://codewat.ch/" hreflang="en">codewatch</a></span>
 		<div class="everything">
