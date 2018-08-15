@@ -1,16 +1,16 @@
 <html>
 	<head>
-		<title>cw blog</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta name="description" content="Benji's website where he posts about stuff" />
-		<meta name="keywords" content="benji, blog, bblog, benjamin, frady, programming, music" />
-		<meta name="author" content="Benji Frady" />
-		<link rel="alternative" href="https://codewat.ch/" hreflang="en" />
-		<link rel="shortcun icon" type="image/png" href="https://i.imgur.com/9qjsYz5.png" />
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<title>cwatch blog</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="description" content="Benji's website where he posts about stuff">
+		<meta name="keywords" content="benji, blog, bblog, benjamin, frady, programming, music">
+		<meta name="author" content="Benji Frady">
+		<link rel="alternative" href="https://codewat.ch/" hreflang="en">
+		<link rel="shortcun icon" type="image/png" href="https://i.imgur.com/9qjsYz5.png">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<style type="text/css">
 body {
-	font-family: 'Open Sans', 'Verdana', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	background: #fff;
 	color: #000;
 	margin: 0px;
@@ -41,9 +41,6 @@ h2 {
 	margin-top: 25px;
 	font-size: 16px;
 }
-h2::first-letter {
-	font-size: 120%;
-}
 h1 {
 	font-weight: 400;
 	font-size: 16px;
@@ -59,14 +56,10 @@ a:hover {
 p {
 	word-spacing: 2px;
 	margin-left: 25px;
-	line-height: 2;
+	line-height: 2.5;
 }
 sup {
 	margin-right: 2px;
-}
-img {
-	float: right;
-	padding: 20px;
 }
 hr {
 	width: 100%;
@@ -76,13 +69,6 @@ hr {
 }
 ul {
 	list-style-type: none;
-}
-#header {
-	position: absolute;
-	top: 0;
-	width: 100%;
-	height: 30px;
-	background: #000;
 }
 #header a {
 	color: #fff;
@@ -96,55 +82,13 @@ ul {
 	font-size: 11px;
 	color: #999;
 }
-#home {
-	width: 980px;
-}
-#info {
-	font-size: 14px;
-	float: left;
-	width: 55%;
-}
-#posts {
-	float: right;
-	font-size: 15px;
-	width: 45%;
-}
-#posts ul {
-	padding-left: 0px;
-	margin-left: 25px;
-}
-#posts li {
-	margin-bottom: 3px;
+#list-page-list li {
+	border-bottom: 1px dashed #999;
 	padding-bottom: 5px;
-}
-.everything {
-	position: relative;
-	top: 32px;
-	z-index: 100;
-	font-size: 14px;
-	word-wrap: break-word;
-	max-width: 940px;
-	min-width: 440px;
-	padding-left: 10px;
-	padding-right: 20px;
-	margin-left: auto;
-	margin-right: auto;
 }
 .center {
 	margin-left: auto;
 	margin-right: auto;
-}
-#title {
-	margin-left: 0;
-	padding-left: 0;
-	position: relative;
-	top: 30px;
-	text-align: center;
-	display: block;
-	margin: 0 auto;
-	max-width: 940px;
-	min-width: 440px;
-	font-size: 36px;
 }
 #title a {
 	-webkit-font-smoothing: antialiased;
@@ -155,26 +99,119 @@ ul {
 	transition: color 0.5s ease;
 	color: #999;
 }
-#nav ul {
-	text-align: center;
-	padding-top: 0;
-	margin-top: 5px;
+.everything {
+	position: relative;
+	z-index: 100;
+	font-size: 14px;
+	word-wrap: break-word;
+	padding-left: 10px;
+	padding-right: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#title {
+	font-family: 'Roboto', sans-serif;
 	margin-left: 0;
 	padding-left: 0;
-}
-#nav {
-	color: #ccc;
-	display: inline-block;
-	margin: 0 auto;
-	position: absolute;
-	top: 0;
-	height: 30px;
+	position: relative;
 	text-align: center;
-	font-size: 14px;
+	display: block;
+	margin: 0 auto;
+	font-size: 36px;
+}
+#posts ul {
+	padding-left: 0px;
+	margin-left: 25px;
+}
+#posts li {
+	margin-bottom: 3px;
+	padding-bottom: 8px;
+}
+@media (min-width: 769px) {
+	#title {
+		top: 36px;
+		max-width: 940px;
+		min-width: 440px;
+	}
+	#nav {
+		color: #ccc;
+		display: inline-block;
+		margin: 0 auto;
+		position: absolute;
+		top: 0;
+		height: 30px;
+		text-align: center;
+		font-size: 14px;
+	}
+	#header {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 30px;
+		background: #000;
+	}
+	#info {
+		font-size: 14px;
+		float: left;
+		width: 50%;
+	}
+	#posts {
+		float: right;
+		font-size: 15px;
+		width: 45%;
+	}
+	#header-center {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 940px;
+		min-width: 440px;
+		display: block;
+	}
+	#nav ul {
+		text-align: center;
+		padding-top: 0;
+		margin-top: 6px;
+		margin-left: 0;
+		padding-left: 0;
+	}
+	.everything {
+		top: 36px;
+		max-width: 940px;
+		min-width: 440px;
+	}
+	#home {
+		width: 980px;
+	}
+	img {
+		float: right;
+		padding: 20px;
+	}
+}
+@media (max-width: 768px) {
+	.everything {
+		word-wrap: break-word;
+	}
+	img {
+		display: block;
+		margin: 0 auto;
+		padding: 20px;
+	}
+	#info {
+		word-wrap: break-word;
+		font-size: 14px;
+	}
+	#posts {
+		font-size: 14px;
+	}
+	#nav {
+		display: none;
+	}
+	#header {
+		display: none;
+	}
 }
 #nav li {
-	padding-left: 8px;
-	padding-right: 8px;
+	padding-right: 16px;
 	float: left;
 }
 #nav li a {
@@ -182,20 +219,23 @@ ul {
 	text-align: center;
 }
 #list-page-list li {
-	margin-bottom: 5px;
+	margin-bottom: 10px;
+	margin-top: 5px;
 }
 		</style>
 	</head>
 	<body>
 		<div id="header">
-			<span id="nav">
-				<ul>
-					<li><a href="https://github.com/ijneb">my github</a></li>
-					<li>-</li>
-					<li><a href="https://www.linkedin.com/in/benjamin-frady">my linkedin</a></li>
-					<li>-</li>
-					<li><a href="https://codewat.ch/list">all blog posts</a></li>
-				</ul>
+			<span id="header-center">
+				<span id="nav">
+					<ul>
+						<li><a href="https://github.com/ijneb">my github</a></li>
+						<li>-</li>
+						<li><a href="https://www.linkedin.com/in/benjamin-frady">my linkedin</a></li>
+						<li>-</li>
+						<li><a href="https://codewat.ch/list">all blog posts</a></li>
+					</ul>
+				</span>
 			</span>
 		</div>
 		<span id="title"><a href="https://codewat.ch/" hreflang="en">codewatch</a></span>
